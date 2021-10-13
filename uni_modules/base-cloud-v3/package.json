@@ -1,0 +1,85 @@
+{
+  "id": "base-cloud-v3",
+  "displayName": "base-cloud-v3 大幅提升云开发服务端开发效率",
+  "version": "1.4.12",
+  "description": "类mysql语法的数据库操作能力，内置了常用的拦截器（中间件）模块。 运行在服务端，可以让熟悉mysql的开发者基于类mysql语法，更为友好的编写MongoDb数据库操作代码。",
+  "keywords": [
+    "路由",
+    "mysql",
+    "云函数",
+    "unicloud云开发",
+    "uni-id"
+],
+  "repository": "https://gitee.com/phoooob/base-cloud-v3",
+  "engines": {
+    "HBuilderX": "^3.1.0"
+  },
+  "dcloudext": {
+    "category": [
+        "uniCloud",
+        "云函数模板"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      },
+      "sourcecode": {
+        "price": "0.00"
+      }
+    },
+    "contact": {
+      "qq": "1162762894"
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "无",
+      "permissions": "无"
+    },
+    "npmurl": ""
+  },
+  "uni_modules": {
+    "dependencies": [
+		"uni-id"
+    ],
+    "platforms": {
+        "cloud": {
+            "tcb": "y",
+            "aliyun": "y"
+        },
+        "client": {
+            "App": {
+                "app-vue": "u",
+                "app-nvue": "u"
+            },
+            "H5-mobile": {
+                "Safari": "u",
+                "Android Browser": "u",
+                "微信浏览器(Android)": "u",
+                "QQ浏览器(Android)": "u"
+            },
+            "H5-pc": {
+                "Chrome": "u",
+                "IE": "u",
+                "Edge": "u",
+                "Firefox": "u",
+                "Safari": "u"
+            },
+            "小程序": {
+                "微信": "u",
+                "阿里": "u",
+                "百度": "u",
+                "字节跳动": "u",
+                "QQ": "u"
+            },
+            "快应用": {
+                "华为": "u",
+                "联盟": "u"
+            },
+            "Vue": {
+                "vue2": "y",
+                "vue3": "u"
+            }
+        }
+    }
+  }
+}

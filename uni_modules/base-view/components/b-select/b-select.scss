@@ -1,0 +1,45 @@
+.rotate{
+	transform: rotate(-180deg);
+}
+
+.suggestions-box{
+	min-width: 100%;
+	margin-top: 5px;
+	top: 100%;
+	.suggestions{
+		max-height: 280px;
+		box-shadow: 0 3px 11px rgba(0,0,0,.1);
+		color: #292827;
+		border: 1px solid #e5e9f1;
+		border-radius: 4px;
+		.suggestions-item{
+			line-height: 20px;
+			&.active{
+				background-color: #f5f7fa;
+				opacity: 1!important;
+			}
+		}
+	}
+	&.isBottom{
+		margin-top: 0;
+		margin-bottom: 5px;
+		top: auto;
+		bottom: 100%;
+		.suggestions{
+			box-shadow: 0 -3px 11px rgba(0,0,0,.1);
+		}
+	}
+}
+
+/* #ifdef H5 */
+.suggestions{
+	.suggestions-item{
+		&:hover{
+			opacity: 0.9;
+		}
+		&.not-allowed{
+			background-color: transparent ;
+		}
+	}
+}
+/* #endif */

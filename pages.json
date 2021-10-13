@@ -1,0 +1,290 @@
+{
+	"pages": [{
+			"path": "uni_modules/baker-app/pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		}, 
+		{
+			"path": "uni_modules/base-view/pages/web-view/web-view"
+		}, {
+			"path": "uni_modules/baker-app/pages/bookshelf/bookshelf",
+			"style": {
+				"navigationBarTitleText": "书架",
+				// #ifdef APP-PLUS || H5
+				"transparentTitle": "auto",
+				// #endif
+				"navigationBarBackgroundColor": "#FFDA33",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "uni_modules/baker-app/pages/userCenter/userCenter",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "uni_modules/baker-app/pages/category/category",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "uni_modules/baker-app/pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		}
+	],
+
+	"subPackages": [{
+			"root": "uni_modules/baker-app/pages/user",
+			"pages": [{
+					"path": "withdrawal",
+					"style": {
+						"navigationBarTitleText": "申请提现"
+					}
+
+				}, {
+					"path": "team",
+					"style": {
+						"navigationBarTitleText": "我的好友"
+					}
+				}, {
+					"path": "vip",
+					"style": {
+						"navigationBarTitleText": "VIP会员"
+					}
+
+				}, {
+					"path": "welfare",
+					"style": {
+						"navigationBarTitleText": "福利中心"
+					}
+				}, {
+					"path": "setting",
+					"style": {
+						"navigationBarTitleText": "设置"
+					}
+
+				}, {
+					"path": "userInfo",
+					"style": {
+						"navigationBarTitleText": "基本信息"
+					}
+				},
+				// {
+				// 	"path": "winningRecord",
+				// 	"style": {
+				// 		"navigationBarTitleText": "中奖记录",
+				// 		"enablePullDownRefresh": true
+				// 	}
+
+				// }, 
+				{
+					"path": "history",
+					"style": {
+						"navigationBarTitleText": "阅读历史",
+						"enablePullDownRefresh": true
+					}
+
+				}, {
+					"path": "myCoin",
+					"style": {
+						"navigationBarTitleText": "我的金币"
+					}
+
+				},
+				// {
+				// 	"path": "myComment",
+				// 	"style": {
+				// 		"navigationBarTitleText": "我的书评",
+				// 		"enablePullDownRefresh": true
+				// 	}
+
+				// }, 
+				{
+					"path": "luckyDraw",
+					"style": {
+						"navigationBarTitleText": "幸运大转盘",
+						"navigationStyle": "custom",
+						"navigationBarTextStyle":"white"
+					}
+				}, {
+					"path": "share",
+					"style": {
+						"navigationStyle": "custom",
+						"navigationBarTitleText": "邀请分享",
+						"navigationBarTextStyle": "white"
+					}
+				}, {
+					"path": "coinRecords",
+					"style": {
+						"navigationBarTitleText": "金币记录",
+						"enablePullDownRefresh": true
+					}
+				}, {
+					"path": "firstCoinRecords",
+					"style": {
+						"navigationBarTitleText": "直邀好友金币记录",
+						"enablePullDownRefresh": true
+					}
+
+				}, {
+					"path": "secondCoinRecords",
+					"style": {
+						"navigationBarTitleText": "扩散好友金币记录",
+						"enablePullDownRefresh": true
+					}
+
+				}, {
+					"path": "withdrawRecord",
+					"style": {
+						"navigationBarTitleText": "提现记录",
+						"enablePullDownRefresh": true
+					}
+
+				}, {
+					"path": "agreement",
+					"style": {
+						"navigationBarTitleText": "用户协议"
+					}
+				}, {
+					"path": "privacy",
+					"style": {
+						"navigationBarTitleText": "隐私政策"
+					}
+				}, {
+					"path": "cancelAccount",
+					"style": {
+						"navigationBarTitleText": "申请注销账号"
+					}
+
+				}, {
+					"path": "feedback",
+					"style": {
+						"navigationBarTitleText": "意见反馈"
+					}
+				}
+			]
+		}, {
+			"root": "uni_modules/baker-app/pages/book",
+			"pages": [
+				// 	{
+				// 	"path": "comment",
+				// 	"style": {
+				// 		"navigationBarTitleText": "书评",
+				// 		"enablePullDownRefresh": true
+				// 	}
+
+				// }, 
+				{
+					"path": "bookInfo",
+					"style": {
+						"navigationBarTitleText": "书籍详情",
+						"navigationStyle": "custom",
+						"navigationBarTextStyle":"white"
+					}
+				}, {
+					"path": "bookList",
+					"style": {
+						"navigationBarTitleText": "小说列表",
+						"enablePullDownRefresh": true,
+						"app-plus": {
+							"titleNView": {
+								"searchInput": {
+									"align": "left",
+									"backgroundColor": "#fff",
+									"borderRadius": "4px",
+									"placeholder": "请输入关键字搜索书籍",
+									"placeholderColor": "#ccc"
+								}
+							}
+						}
+					}
+
+				}, {
+					"path": "chapterInfo",
+					"style": {
+						// #ifdef APP-PLUS || H5
+						"navigationStyle": "custom",
+						"navigationBarTextStyle": "white",
+						// #endif
+						// #ifdef MP-WEIXIN
+						"navigationBarBackgroundColor": "#FFDB3C",
+						"navigationBarTextStyle": "black",
+						// #endif
+						"navigationBarTitleText": ""
+					}
+				},
+				// {
+				// 	"path": "reward",
+				// 	"style": {
+				// 		"navigationBarTitleText": "打赏",
+				// 		"enablePullDownRefresh": false
+				// 	}
+
+				// }, 
+				{
+					"path": "search",
+					"style": {
+						"enablePullDownRefresh": true,
+						"app-plus": {
+							"titleNView": {
+								"searchInput": {
+									"autoFocus": true,
+									"align": "left",
+									"backgroundColor": "#fff",
+									"borderRadius": "4px",
+									"placeholder": "请输入关键字搜索书籍",
+									"placeholderColor": "#ccc"
+								}
+							}
+						}
+					}
+
+				}
+			]
+		}
+	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#FBA40B",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "uni_modules/baker-app/pages/index/index",
+			"iconPath": "/uni_modules/baker-app/static/home.png",
+			"selectedIconPath": "/uni_modules/baker-app/static/homeCur.png",
+			"text": "书城"
+		}, {
+			"pagePath": "uni_modules/baker-app/pages/bookshelf/bookshelf",
+			"iconPath": "/uni_modules/baker-app/static/books.png",
+			"selectedIconPath": "/uni_modules/baker-app/static/booksCur.png",
+			"text": "书架"
+
+		}, {
+			"pagePath": "uni_modules/baker-app/pages/category/category",
+			"iconPath": "/uni_modules/baker-app/static/category.png",
+			"selectedIconPath": "/uni_modules/baker-app/static/categoryCur.png",
+			"text": "分类"
+		}, {
+			"pagePath": "uni_modules/baker-app/pages/userCenter/userCenter",
+			"iconPath": "/uni_modules/baker-app/static/userCenter.png",
+			"selectedIconPath": "/uni_modules/baker-app/static/userCenterCur.png",
+			"text": "我的"
+		}]
+	},
+
+	"globalStyle": {
+		"rpxCalcMaxDeviceWidth": 476,
+		"rpxCalcBaseDeviceWidth": 375,
+		"rpxCalcIncludeWidth": 750,
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "贝壳阅读",
+		"navigationBarBackgroundColor": "#FFDA33",
+		"backgroundColor": "#F8F8F8"
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"notifyUrl": "云函数base-payment的外网地址，示例：https://22q343-219e-4ebc-99a4-e844865e8d0b.bspapp.com/http/payment",
+	"wxpay": {
+		"mp-weixin": {
+			"appId": "wxaac...155c7d",
+			"appSecret": "7dcd5fa3f....4ed62491071ae4223",
+			"mchId": "15....381",
+			"key": "f8ec2354da2....e1759b6a0a00e9a",
+			"pfx": "cert/apiclient_cert.p12"
+		},
+		"app-plus": {
+			"appId": "wxaac...155c7d",
+			"appSecret": "7dcd5fa3f....4ed62491071ae4223",
+			"mchId": "15....381",
+			"key": "f8ec2354da2....e1759b6a0a00e9a",
+			"pfx": "cert/apiclient_cert.p12"
+		}
+	},
+	"alipay": {
+		"app-plus": {
+			"appId": "202100....677059",
+			"mchId": "208893....350543",
+			"privateKey": "MIIEvQIBA....JR021f7SdrdVo=",
+			"alipayRootCertPath": "cert/alipayRootCert.crt",
+			"appCertPath": "cert/appCertPublicKey_2021001191677059.crt",
+			"alipayPublicCertPath": "cert/alipayCertPublicKey_RSA2.crt"
+		}
+	},
+	"appleiap": {
+		"app-plus": {
+			"bundleId": "",
+			"sandbox": true
+		}
+	}
+}

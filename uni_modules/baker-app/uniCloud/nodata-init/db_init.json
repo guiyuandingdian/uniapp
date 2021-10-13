@@ -1,0 +1,4145 @@
+//本文件为数据表结构初始化文件，不包含测试数据
+{
+	"baker_read_reward": {
+	    "index": [
+	        {
+	            "IndexName": "createTime",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "-1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "findRecord",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "-1"
+	                    },
+	                    {
+	                        "Name": "uid",
+	                        "Direction": "1"
+	                    },
+	                    {
+	                        "Name": "minutes",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "minutes",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "minutes",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ],
+	    "schema": {
+	        "bsonType": "object",
+	        "required": [],
+	        "permission": {
+	            "read": false,
+	            "create": false,
+	            "update": false,
+	            "delete": false
+	        },
+	        "properties": {
+	            "_id": {
+	                "description": "ID，系统自动生成"
+	            }
+	        }
+	    }
+	},
+	"baker_feedback": {
+	    "index": [
+	        {
+	            "IndexName": "ip",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "ip",
+	                        "Direction": "1"
+	                    },
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "-1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "createTime",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "-1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ]
+	},
+	"baker_partner_book": {
+	    "index": [
+	        {
+	            "IndexName": "partnerId",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "partnerId",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "partnerBookId",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "partnerBookId",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "error",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "error",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "updateTime",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "updateTime",
+	                        "Direction": "-1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "uniqueBook",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "partnerId",
+	                        "Direction": "1"
+	                    },
+	                    {
+	                        "Name": "partnerBookId",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": true
+	            }
+	        }
+	    ]
+	},
+	"baker_partner": {
+	    "index": [
+	        {
+	            "IndexName": "partnerId",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "partnerId",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": true
+	            }
+	        },
+	        {
+	            "IndexName": "appId",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "appId",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": true
+	            }
+	        }
+	    ]
+	},
+	"base_cancel_account": {
+	    "schema": {
+	        "bsonType": "object",
+	        "required": [],
+	        "permission": {
+	            "read": false,
+	            "create": false,
+	            "update": false,
+	            "delete": false
+	        },
+	        "properties": {
+	            "_id": {
+	                "description": "ID，系统自动生成"
+	            },
+				"userInfo":{
+					"description": "已注销用户数据"
+				},
+				"targetUserInfo":{
+					"description": "被绑定用户数据"
+				}
+	        }
+	    }
+	},
+	"baker_account": {
+	    "index": [
+	        {
+	            "IndexName": "uid",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "uid",
+	                        "Direction": "1"
+	                    },
+	                    {
+	                        "Name": "type",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "user",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "uid",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ]
+	},
+	"baker_withdraw_record": {
+	    "index": [
+	        {
+	            "IndexName": "uid",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "uid",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "createTime",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "-1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "withdrawType",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "withdrawType",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "status",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "status",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "withdrawRecord",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "uid",
+	                        "Direction": "1"
+	                    },
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "-1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ],
+	    "schema": {
+	        "bsonType": "object",
+	        "required": [],
+	        "permission": {
+	            "read": false,
+	            "create": false,
+	            "update": false,
+	            "delete": false
+	        },
+	        "properties": {
+	            "_id": {
+	                "description": "ID，系统自动生成"
+	            }
+	        }
+	    }
+	},
+	"base_fission": {
+	    "data": [
+	        {
+	            "width": 375,
+	            "height": 667,
+	            "panelWidth": 300,
+	            "background": "#5b3fba",
+	            "bindTips": "安装完成后，填写邀请码即可绑定好友关系",
+	            "downloadTips": "长按扫码下载安装贝壳小说",
+	            "downloadUrl": "",
+	            "backgroundImg": "",
+	            "logo": "",
+	            "createTime": 1624605891761,
+	            "updateTime": 1625021363240,
+	            "androidUrl": "aaa",
+	            "iosUrl": "aaa",
+	            "shareCover": "",
+	            "summary": "全场小说免费看，快与我一起来赚钱！",
+	            "title": "分享标题三生三世",
+	            "mpId": "gh_5e6e882c6f08",
+	            "path": "",
+	            "name": "贝壳免费小说"
+	        }
+	    ]
+	},
+	"baker_withdraw": {
+	    "index": [
+	        {
+	            "IndexName": "amount",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "amount",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ]
+	},
+	"baker_redpacket_record": {
+	    "data": [
+	        {
+	            "uid": "60b6f9365e31f5000145de13",
+	            "createTime": 1624967735354,
+	            "coin": 30000,
+	            "amount": 3,
+	            "redpacketId": "60d80039acc1cf000187d0bd",
+	            "minFriends": 1,
+	            "myFriends": 1,
+	            "remark": "1人奖励3元红包"
+	        }
+	    ],
+	    "index": [
+	        {
+	            "IndexName": "createTime",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "-1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "redpacketId",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "redpacketId",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "uid",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "uid",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ],
+	    "schema": {
+	        "bsonType": "object",
+	        "required": [],
+	        "permission": {
+	            "read": false,
+	            "create": false,
+	            "update": false,
+	            "delete": false
+	        },
+	        "properties": {
+	            "_id": {
+	                "description": "ID，系统自动生成"
+	            }
+	        }
+	    }
+	},
+	"baker_redpacket": {
+	    "index": [
+	        {
+	            "IndexName": "friends",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "friends",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ]
+	},
+	"baker_platform_bill": {
+	    "data": [
+	        {
+	            "userId": "60d2989ff183a00001fbd6cd",
+	            "amount": 2,
+	            "payType": "alipay",
+	            "isIncome": true,
+	            "remark": "购买2天会员",
+	            "type": 1,
+	            "vipOrderId": "60d2b2712881d3000172d308",
+	            "createTime": 1624420977781,
+	            "updateTime": 1624420977781
+	        }
+	    ],
+	    "index": [
+	        {
+	            "IndexName": "userId",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "userId",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "isIncome",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "isIncome",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "type",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "type",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "createTime",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "vipOrderId",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "vipOrderId",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ]
+	},
+	"baker_lucky": {
+	    "index": [
+	        {
+	            "IndexName": "uid",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "uid",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "createTime",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "-1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "index",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "index",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ],
+	    "schema": {
+	        "bsonType": "object",
+	        "required": [],
+	        "permission": {
+	            "read": false,
+	            "create": false,
+	            "update": false,
+	            "delete": false
+	        },
+	        "properties": {
+	            "_id": {
+	                "description": "ID，系统自动生成"
+	            }
+	        }
+	    }
+	},
+	"baker_coin": {
+	    "index": [
+	        {
+	            "IndexName": "uid",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "uid",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "isIncome",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "isIncome",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "createTime",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "createTime",
+	                        "Direction": "-1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "fromLevel",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "fromLevel",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        },
+	        {
+	            "IndexName": "fromUid",
+	            "MgoKeySchema": {
+	                "MgoIndexKeys": [
+	                    {
+	                        "Name": "fromUid",
+	                        "Direction": "1"
+	                    }
+	                ],
+	                "MgoIsUnique": false
+	            }
+	        }
+	    ],
+	    "schema": {
+	        "bsonType": "object",
+	        "required": [],
+	        "permission": {
+	            "read": false,
+	            "create": false,
+	            "update": false,
+	            "delete": false
+	        },
+	        "properties": {
+	            "_id": {
+	                "description": "ID，系统自动生成"
+	            }
+	        }
+	    }
+	},
+    "baker_ad": {
+        "index": [
+            {
+                "IndexName": "deviceId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "deviceId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "uid",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "uid",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                }
+            }
+        }
+    },
+    "baker_ad_reward": {
+        "index": [
+			{
+			    "IndexName": "createTime",
+			    "MgoKeySchema": {
+			        "MgoIndexKeys": [
+			            {
+			                "Name": "createTime",
+			                "Direction": "-1"
+			            }
+			        ],
+			        "MgoIsUnique": false
+			    }
+			},
+            {
+                "IndexName": "adId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "adId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "deviceId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "deviceId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "uid",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "uid",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "type",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "type",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                }
+            }
+        }
+    },
+    "baker_book": {
+        "index": [
+            {
+                "IndexName": "name",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "name",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "author",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "author",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "categoryId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "categoryId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "finished",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "finished",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "status",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "status",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "channel",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "channel",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "lastUpdateTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "lastUpdateTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "partnerBookId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "partnerBookId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "partnerId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "partnerId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "baker_category": {
+        "data": [
+            {
+                "_id": 1005,
+                "level": 1,
+                "name": "都市人生",
+                "sort": 1,
+                "parentId": 1,
+                "createTime": 1620726484457,
+                "updateTime": 1621817598548
+            },
+            {
+                "_id": 1006,
+                "level": 1,
+                "name": "玄幻奇幻",
+                "sort": 2,
+                "parentId": 1,
+                "createTime": 1620727963632,
+                "updateTime": 1621820307654
+            },
+            {
+                "_id": 1007,
+                "level": 2,
+                "parentId": 1005,
+                "name": "乡村生活",
+                "sort": 1,
+                "createTime": 1620728065836,
+                "updateTime": 1621822076285,
+                "remark": "主角在现代乡村中崛起致富的小说。"
+            },
+            {
+                "_id": 1008,
+                "level": 2,
+                "parentId": 1005,
+                "name": "异术超能",
+                "sort": 2,
+                "createTime": 1620728646062,
+                "updateTime": 1621819892913,
+                "remark": "现代都市背景下，主角具有超自然能力的小说。"
+            },
+            {
+                "_id": 1009,
+                "level": 1,
+                "name": "现代言情",
+                "sort": 1,
+                "parentId": 2,
+                "createTime": 1620736709740,
+                "updateTime": 1621825603581
+            },
+            {
+                "_id": 1010,
+                "level": 2,
+                "name": "总裁豪门",
+                "sort": 1,
+                "parentId": 1009,
+                "remark": "男主人设为家世显赫，权势滔天的霸道总裁的小说。",
+                "createTime": 1620736725079,
+                "updateTime": 1621825673999
+            },
+            {
+                "_id": 1011,
+                "level": 2,
+                "name": "职场情缘",
+                "sort": 2,
+                "parentId": 1009,
+                "remark": "除娱乐明星外的其他职业的婚恋故事，且主角有明显职业身份。",
+                "createTime": 1620736740306,
+                "updateTime": 1621825742043
+            },
+            {
+                "_id": 1018,
+                "level": 2,
+                "name": "东方玄幻",
+                "sort": 1,
+                "parentId": 1006,
+                "remark": "以修炼变强为主题的东方式幻想小说。",
+                "createTime": 1621759193666,
+                "updateTime": 1621822105326
+            },
+            {
+                "_id": 1019,
+                "level": 2,
+                "name": "异界大陆",
+                "sort": 2,
+                "parentId": 1006,
+                "remark": "以架空的异世界为背景的修炼幻想小说。",
+                "createTime": 1621759210479,
+                "updateTime": 1621822402410
+            },
+            {
+                "_id": 1020,
+                "level": 2,
+                "name": "西方奇幻",
+                "sort": 4,
+                "parentId": 1006,
+                "remark": "以魔法、骑士等元素为主题的西式幻想小说。",
+                "createTime": 1621759220844,
+                "updateTime": 1621822407896
+            },
+            {
+                "_id": 1024,
+                "level": 2,
+                "name": "民国旧影",
+                "sort": 3,
+                "parentId": 1009,
+                "remark": "时代背景为民国的婚恋故事。",
+                "createTime": 1621760173871,
+                "updateTime": 1621825795784
+            },
+            {
+                "_id": 1025,
+                "level": 2,
+                "name": "都市高手",
+                "sort": 3,
+                "parentId": 1005,
+                "remark": "现代都市背景下，主角具备高超武力的小说。",
+                "createTime": 1621760501711,
+                "updateTime": 1621822080529
+            },
+            {
+                "_id": 1026,
+                "level": 2,
+                "name": "商战职场",
+                "sort": 4,
+                "parentId": 1005,
+                "remark": "现代都市背景下，主线围绕商战创业或赚钱的小说。",
+                "createTime": 1621760513883,
+                "updateTime": 1621822086345
+            },
+            {
+                "_id": 1027,
+                "level": 2,
+                "name": "热血校园",
+                "sort": 5,
+                "parentId": 1005,
+                "remark": "在现代校园里发生的青春小说。",
+                "createTime": 1621760574413,
+                "updateTime": 1621822091822
+            },
+            {
+                "_id": 1028,
+                "level": 2,
+                "name": "现实百态",
+                "sort": 6,
+                "parentId": 1005,
+                "remark": "现代都市下背景下的社会现实小说。",
+                "createTime": 1621760677190,
+                "updateTime": 1621822095963
+            },
+            {
+                "_id": 1030,
+                "level": 2,
+                "name": "诸天万界",
+                "sort": 3,
+                "parentId": 1006,
+                "remark": "在多个不同世界背景下穿梭，升级变强的幻想小说。",
+                "createTime": 1621820975428,
+                "updateTime": 1621820975428
+            },
+            {
+                "_id": 1031,
+                "level": 1,
+                "name": "武侠仙侠",
+                "sort": 3,
+                "parentId": 1,
+                "createTime": 1621822217210,
+                "updateTime": 1621822217210
+            },
+            {
+                "_id": 1032,
+                "level": 2,
+                "name": "上古洪荒",
+                "sort": 1,
+                "parentId": 1031,
+                "remark": "以特定的洪荒、西游、封神等为背景的修仙小说。",
+                "createTime": 1621822282441,
+                "updateTime": 1621822282441
+            },
+            {
+                "_id": 1033,
+                "level": 2,
+                "name": "古典仙侠",
+                "sort": 2,
+                "parentId": 1031,
+                "remark": "古风古色，设定纯粹的修仙小说。",
+                "createTime": 1621822334487,
+                "updateTime": 1621822334487
+            },
+            {
+                "_id": 1034,
+                "level": 2,
+                "name": "传统武侠",
+                "sort": 3,
+                "parentId": 1031,
+                "remark": "以古代江湖为背景，描写恩怨情仇，狭义情缘的小说。",
+                "createTime": 1621822387331,
+                "updateTime": 1621822387331
+            },
+            {
+                "_id": 1035,
+                "level": 2,
+                "name": "幻想修真",
+                "sort": 4,
+                "parentId": 1031,
+                "remark": "包含非修仙体系元素的修仙小说。",
+                "createTime": 1621823636885,
+                "updateTime": 1621823655199
+            },
+            {
+                "_id": 1036,
+                "level": 2,
+                "name": "国术无双",
+                "sort": 5,
+                "parentId": 1031,
+                "remark": "以近现代都市为背景，以修炼国术为主的武侠小说。",
+                "createTime": 1621823721486,
+                "updateTime": 1621823721486
+            },
+            {
+                "_id": 1037,
+                "level": 2,
+                "name": "武侠幻想",
+                "sort": 6,
+                "parentId": 1031,
+                "remark": "以古代江湖为背景，混杂其他幻想元素的武侠小说。",
+                "createTime": 1621823776215,
+                "updateTime": 1621823776215
+            },
+            {
+                "_id": 1038,
+                "level": 1,
+                "name": "奇闻异事",
+                "sort": 4,
+                "parentId": 1,
+                "createTime": 1621823820457,
+                "updateTime": 1621823820457
+            },
+            {
+                "_id": 1039,
+                "level": 2,
+                "name": "神秘怪谈",
+                "sort": 1,
+                "parentId": 1038,
+                "remark": "包含鬼怪元素，以营造神秘氛围为主的小说。",
+                "createTime": 1621824325485,
+                "updateTime": 1621824325485
+            },
+            {
+                "_id": 1040,
+                "level": 2,
+                "name": "侦探推理",
+                "sort": 2,
+                "parentId": 1038,
+                "remark": "以刑侦推理，破案解密为主的小说。",
+                "createTime": 1621824381454,
+                "updateTime": 1621824381454
+            },
+            {
+                "_id": 1041,
+                "level": 2,
+                "name": "惊心动魄",
+                "sort": 3,
+                "parentId": 1038,
+                "remark": "以血腥、惊悚为主要元素的小说。",
+                "createTime": 1621824605939,
+                "updateTime": 1621824612524
+            },
+            {
+                "_id": 1042,
+                "level": 2,
+                "name": "寻宝探险",
+                "sort": 4,
+                "parentId": 1038,
+                "remark": "以盗墓、探险为主线的小说",
+                "createTime": 1621825531646,
+                "updateTime": 1621825531646
+            },
+            {
+                "_id": 1044,
+                "level": 2,
+                "name": "现实生活",
+                "sort": 4,
+                "parentId": 1009,
+                "remark": "现代都市背景下的社会现实的小说。",
+                "createTime": 1621825842391,
+                "updateTime": 1621825853782
+            },
+            {
+                "_id": 1045,
+                "level": 2,
+                "name": "青春校园",
+                "sort": 5,
+                "parentId": 1009,
+                "remark": "以校园生活为背景，描写男女主青葱恋情的小说。",
+                "createTime": 1621825912585,
+                "updateTime": 1621825912585
+            },
+            {
+                "_id": 1046,
+                "level": 2,
+                "name": "都市奇幻",
+                "sort": 6,
+                "parentId": 1009,
+                "remark": "现代背景下的异能修仙女。",
+                "createTime": 1621825954167,
+                "updateTime": 1621825954167
+            },
+            {
+                "_id": 1047,
+                "level": 1,
+                "name": "古代言情",
+                "sort": 2,
+                "parentId": 2,
+                "createTime": 1621825978804,
+                "updateTime": 1621825978804
+            },
+            {
+                "_id": 1048,
+                "level": 2,
+                "name": "种田经商",
+                "sort": 1,
+                "parentId": 1047,
+                "remark": "以农村生活，发家致富为主线的古代言情。",
+                "createTime": 1621826022139,
+                "updateTime": 1621826022139
+            },
+            {
+                "_id": 1049,
+                "level": 2,
+                "name": "宫闱宅斗",
+                "sort": 2,
+                "parentId": 1047,
+                "remark": "以宫斗宅斗作为突出主线的古代言情。",
+                "createTime": 1621826391318,
+                "updateTime": 1621826391318
+            },
+            {
+                "_id": 1050,
+                "level": 2,
+                "name": "古代情缘",
+                "sort": 3,
+                "parentId": 1047,
+                "remark": "除穿越、宫斗宅斗、种田，女强外的发生在古代的情感故事。",
+                "createTime": 1621826447877,
+                "updateTime": 1621826447877
+            },
+            {
+                "_id": 1051,
+                "level": 2,
+                "name": "权谋天下",
+                "sort": 4,
+                "parentId": 1047,
+                "remark": "以官朝政斗、权谋为主线的古代小说。",
+                "createTime": 1621826514632,
+                "updateTime": 1621826514632
+            },
+            {
+                "_id": 1052,
+                "level": 2,
+                "name": "武侠江湖",
+                "sort": 5,
+                "parentId": 1047,
+                "remark": "以古代江湖为背景，描写男女之间侠义情缘为主的小说。",
+                "createTime": 1621826564745,
+                "updateTime": 1621826564745
+            },
+            {
+                "_id": 1053,
+                "level": 2,
+                "name": "远古大陆",
+                "sort": 6,
+                "parentId": 1047,
+                "remark": "故事背景设定在原始文明时期的小说。",
+                "createTime": 1621826607316,
+                "updateTime": 1621826607316
+            },
+            {
+                "_id": 1054,
+                "level": 1,
+                "name": "幻想言情",
+                "sort": 3,
+                "parentId": 2,
+                "createTime": 1621826627554,
+                "updateTime": 1621826627554
+            },
+            {
+                "_id": 1055,
+                "level": 2,
+                "name": "玄幻仙侠",
+                "sort": 1,
+                "parentId": 1054,
+                "remark": "设定为东方背景，掺杂幻想元素，多以玄幻、修仙修真为主。",
+                "createTime": 1621828354146,
+                "updateTime": 1621828354146
+            },
+            {
+                "_id": 1056,
+                "level": 2,
+                "name": "未来科幻",
+                "sort": 2,
+                "parentId": 1054,
+                "remark": "世界观架构在未来向的小说，故事元素包括但不属于末世、机甲。",
+                "createTime": 1621828425661,
+                "updateTime": 1621828425661
+            },
+            {
+                "_id": 1057,
+                "level": 2,
+                "name": "无限快穿",
+                "sort": 3,
+                "parentId": 1054,
+                "remark": "设定主角在多个不同世界背景下穿梭的幻想爱情小说。",
+                "createTime": 1621828594958,
+                "updateTime": 1621828594958
+            },
+            {
+                "_id": 1058,
+                "level": 2,
+                "name": "末世求生",
+                "sort": 4,
+                "parentId": 1054,
+                "remark": "世界末日为背景，冒险求生的幻想爱情小说。",
+                "createTime": 1621828652757,
+                "updateTime": 1621828652757
+            },
+            {
+                "_id": 1060,
+                "level": 1,
+                "name": "影视原著",
+                "sort": 4,
+                "parentId": 2,
+                "createTime": 1621828788319,
+                "updateTime": 1621828788319
+            },
+            {
+                "_id": 1061,
+                "level": 2,
+                "name": "现代言情",
+                "sort": 1,
+                "parentId": 1060,
+                "remark": "以现代或近代为背景，以描写男女主之间爱情为主的小说。",
+                "createTime": 1621828833067,
+                "updateTime": 1621828833067
+            },
+            {
+                "_id": 1062,
+                "level": 2,
+                "name": "古代言情",
+                "sort": 2,
+                "parentId": 1060,
+                "remark": "以古代社会为背景，以描写男女之间爱情为主的小说。",
+                "createTime": 1621828877822,
+                "updateTime": 1621828877822
+            },
+            {
+                "_id": 1063,
+                "level": 2,
+                "name": "幻想言情",
+                "sort": 3,
+                "parentId": 1060,
+                "remark": "以仙侠、西幻、未来科幻为背景，以描写男女之间爱情为主的小说。",
+                "createTime": 1621828938229,
+                "updateTime": 1621828938229
+            },
+            {
+                "_id": 1064,
+                "level": 2,
+                "name": "玄幻奇幻",
+                "sort": 4,
+                "parentId": 1060,
+                "remark": "以东西方神话为基础的幻想小说。",
+                "createTime": 1621828983094,
+                "updateTime": 1621828983094
+            },
+            {
+                "_id": 1065,
+                "level": 2,
+                "name": "都市人生",
+                "sort": 5,
+                "parentId": 1060,
+                "remark": "以现代都市为背景原型的传奇小说。",
+                "createTime": 1621829021311,
+                "updateTime": 1621829021311
+            },
+            {
+                "_id": 1066,
+                "level": 2,
+                "name": "经典文学",
+                "sort": 6,
+                "parentId": 1060,
+                "remark": "在特定时代居右代表性和重要意义的文学作品。",
+                "createTime": 1621829059846,
+                "updateTime": 1621829059846
+            },
+            {
+                "_id": 1067,
+                "level": 1,
+                "name": "文学艺术",
+                "sort": 1,
+                "parentId": 3,
+                "createTime": 1621841242281,
+                "updateTime": 1621841242281
+            },
+            {
+                "_id": 1068,
+                "level": 2,
+                "name": "人物传记",
+                "sort": 1,
+                "parentId": 1067,
+                "remark": "对典型人物生平进行系统描述和介绍的文学作品。",
+                "createTime": 1621841292871,
+                "updateTime": 1621841292871
+            },
+            {
+                "_id": 1069,
+                "level": 2,
+                "name": "散文随笔",
+                "sort": 2,
+                "parentId": 1067,
+                "remark": "以灵活的写作方式抒发作者真情实感的文学作品。",
+                "createTime": 1621841328230,
+                "updateTime": 1621841328230
+            },
+            {
+                "_id": 1070,
+                "level": 2,
+                "name": "诗词歌赋",
+                "sort": 3,
+                "parentId": 1067,
+                "remark": "以诗歌、词曲、赋等文学体裁创作的文学作品。",
+                "createTime": 1621841388600,
+                "updateTime": 1621841388600
+            },
+            {
+                "_id": 1071,
+                "level": 2,
+                "name": "讨论研究",
+                "sort": 4,
+                "parentId": 1067,
+                "remark": "对文学作品或社会现状进行深入的探讨和研究的文学作品。",
+                "createTime": 1621841440372,
+                "updateTime": 1621841440372
+            },
+            {
+                "_id": 1072,
+                "level": 1,
+                "name": "经管励志",
+                "sort": 2,
+                "parentId": 3,
+                "createTime": 1621841482327,
+                "updateTime": 1621841482327
+            },
+            {
+                "_id": 1073,
+                "level": 2,
+                "name": "成功有道",
+                "sort": 1,
+                "parentId": 1072,
+                "remark": "主题围绕如何获得成功的书籍。",
+                "createTime": 1621841526545,
+                "updateTime": 1621841526545
+            },
+            {
+                "_id": 1074,
+                "level": 2,
+                "name": "励志鸡汤",
+                "sort": 2,
+                "parentId": 1072,
+                "remark": "促使人积极向上，讲述人生感悟的书籍。",
+                "createTime": 1621841565810,
+                "updateTime": 1621841565810
+            },
+            {
+                "_id": 1075,
+                "level": 2,
+                "name": "企业管理",
+                "sort": 3,
+                "parentId": 1072,
+                "remark": "主题围绕经济、管理、成功学、励志等内容的书籍。",
+                "createTime": 1621841604942,
+                "updateTime": 1621841604942
+            },
+            {
+                "_id": 1076,
+                "level": 2,
+                "name": "理财经济",
+                "sort": 4,
+                "parentId": 1072,
+                "remark": "讲述经济、财务管理等相关知识的书籍。",
+                "createTime": 1621841647552,
+                "updateTime": 1621841647552
+            },
+            {
+                "_id": 1077,
+                "level": 1,
+                "parentId": 3,
+                "name": "经典文学",
+                "sort": 3,
+                "createTime": 1621841670439,
+                "updateTime": 1621841670439
+            },
+            {
+                "_id": 1078,
+                "level": 2,
+                "name": "中国文学",
+                "sort": 1,
+                "parentId": 1077,
+                "remark": "具有代表性和重要意义的中国文学作品。",
+                "createTime": 1621841703679,
+                "updateTime": 1621841703679
+            },
+            {
+                "_id": 1079,
+                "level": 2,
+                "name": "外国文学",
+                "sort": 2,
+                "parentId": 1077,
+                "remark": "具有代表性和重要意义的外国文学作品。",
+                "createTime": 1621841739125,
+                "updateTime": 1621841739125
+            },
+            {
+                "_id": 1080,
+                "level": 1,
+                "name": "少儿教育",
+                "sort": 4,
+                "parentId": 3,
+                "createTime": 1621841763179,
+                "updateTime": 1621841763179
+            },
+            {
+                "_id": 1081,
+                "level": 2,
+                "name": "少儿读物",
+                "sort": 1,
+                "parentId": 1080,
+                "remark": "适合少儿、青少年阅读的书籍。",
+                "createTime": 1621841788703,
+                "updateTime": 1621841788703
+            },
+            {
+                "_id": 1082,
+                "level": 2,
+                "name": "亲子教育",
+                "sort": 2,
+                "parentId": 1080,
+                "remark": "适合父母和教育者阅读的书籍。",
+                "createTime": 1621841818564,
+                "updateTime": 1621841818564
+            }
+        ],
+        "index": [
+            {
+                "IndexName": "level",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "level",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "name",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "name",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "sort",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "sort",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "parentId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "parentId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "createTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "createTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "baker_chapter": {
+        "index": [
+            {
+                "IndexName": "bookId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "bookId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "editTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "editTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "sort",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "sort",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "status",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "status",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "getChapter",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "bookId",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "sort",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "status",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "baker_history": {
+        "index": [
+            {
+                "IndexName": "uid",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "uid",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "isRead",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "isRead",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "addShelf",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "addShelf",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "updateTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "updateTime",
+                            "Direction": "-1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "queryHistory",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "uid",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "updateTime",
+                            "Direction": "-1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "queryShelf",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "uid",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "addShelf",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "updateTime",
+                            "Direction": "-1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "baker_recommend": {
+        "index": [
+            {
+                "IndexName": "channel",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "channel",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "sort",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "sort",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "static",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "static",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "query",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "channel",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "static",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "sort",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "typeChannel",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "type",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "channel",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "baker_recommend_book": {
+        "index": [
+            {
+                "IndexName": "bookId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "bookId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "recommendId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "recommendId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "query",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "recommendId",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "sort",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "baker_sign": {
+        "index": [
+            {
+                "IndexName": "uid",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "uid",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "recentDate",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "recentDate",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "base_auto_number": {
+        "index": [
+            {
+                "IndexName": "ids",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "ids",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "base_banner": {
+        "index": [
+            {
+                "IndexName": "scene",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "scene",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "sort",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "scene",
+                            "Direction": "1"
+                        },
+                        {
+                            "Name": "sort",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "base_config": {
+        "data": [
+            {
+                "SSuperVideoCoins": 10,
+                "SuperVideoCoins": 30,
+                "androidUrl": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-97fca9f2-41f6-449f-a35e-3f135d4c3875/6d754387-a6c3-48ed-8ad2-e8f39b40fc01.apk",
+                "appAdpid": "1507000689",
+                "appBannerAdpid": "1111111111",
+                "appName": "贝壳免费小说",
+                "createTime": 1624778826240,
+                "exchangeRate": 10000,
+                "firstSignCoins": 100,
+                "iosUrl": "https://itunes.apple.com/cn/app/hello-uni-app/id1417078253?mt=8",
+                "logo": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-50b20889-219e-4ebc-99a4-e844865e8d0b/8ae41297-c4c7-4a43-9bd6-f6a848f0add3.png",
+                "luckyCoinCount_0": 38,
+                "luckyCoinCount_1": 160,
+                "luckyCoinCount_2": 888,
+                "luckyCoinCount_3": 100000,
+                "luckyCoinCount_4": 68,
+                "luckyCoinCount_5": 60000,
+                "luckyCoinCount_6": 88,
+                "luckyCoinCount_7": 20000,
+                "luckyCoinRate_0": 250,
+                "luckyCoinRate_1": 200,
+                "luckyCoinRate_2": 190,
+                "luckyCoinRate_3": 1,
+                "luckyCoinRate_4": 200,
+                "luckyCoinRate_5": 2,
+                "luckyCoinRate_6": 155,
+                "luckyCoinRate_7": 3,
+                "luckyTimes": 2,
+                "luckyVideoSSuperCoins": 10,
+                "luckyVideoSupperCoins": 20,
+                "maxSignScale": 30,
+                "mpweixinAdpid": "",
+                "mpweixinBannerAdpid": "",
+                "noAdMinutes": 30,
+                "noAdSSuperCoins": 10,
+                "noAdSupperCoins": 20,
+                "noAdTimes": 5,
+                "readCoins": 30,
+                "sSuperReadCoins": 6,
+                "sSuperSignVideoCoins": 10,
+                "sSuperVideoCoins": 5,
+                "sSuperVipCoins": 50,
+                "signCoins": 30,
+                "superReadCoins": 12,
+                "superSignVideoCoins": 20,
+                "superVideoCoins": 10,
+                "superVipCoins": 100,
+                "updateTime": 1625137282854,
+                "validFriendCoins": 500,
+                "videoCoins": 30,
+                "videoTimes": 1,
+                "vipReadCoins": 50,
+                "vipSignCoins": 50,
+                "vipVideoCoins": 50,
+                "withdrawType": "wxpay",
+                "adMaxCount": "10",
+                "adPages": "7"
+            }
+        ]
+    },
+    "base_login_log": {
+        "index": [
+            {
+                "IndexName": "uid",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "uid",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "isSuccess",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "isSuccess",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "deviceId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "deviceId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "createTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "createTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "baker_vip": {
+        "data": [
+            {
+                "title": "年卡会员",
+                "days": 365,
+                "price": 115,
+                "originPrice": 258,
+                "tag": "特价五折",
+                "sort": 1,
+                "createTime": 1624059529406,
+                "updateTime": 1624064206025
+            },
+            {
+                "title": "半年卡会员",
+                "days": 180,
+                "price": 128,
+                "originPrice": "",
+                "tag": "",
+                "sort": 10,
+                "createTime": 1624060263054,
+                "updateTime": 1624064254206
+            },
+            {
+                "title": "季卡会员",
+                "days": 90,
+                "price": 49,
+                "originPrice": "",
+                "tag": "",
+                "sort": 20,
+                "createTime": 1624065623153,
+                "updateTime": 1624065623153
+            },
+            {
+                "title": "月卡会员",
+                "days": 30,
+                "price": 12,
+                "originPrice": "",
+                "tag": "",
+                "sort": 30,
+                "createTime": 1624065781316,
+                "updateTime": 1624065781316
+            },
+            {
+                "title": "体验会员",
+                "days": 7,
+                "price": 3,
+                "originPrice": 5,
+                "tag": "",
+                "sort": 40,
+                "createTime": 1624065969406,
+                "updateTime": 1624065988537
+            },
+            {
+                "title": "1天会员",
+                "days": 2,
+                "price": 0.02,
+                "originPrice": "",
+                "tag": "体验专享",
+                "sort": 50,
+                "createTime": 1624092866874,
+                "updateTime": 1624230659217
+            }
+        ],
+        "index": [
+            {
+                "IndexName": "sort",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "sort",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "baker_vip_order": {
+        "index": [
+            {
+                "IndexName": "userId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "userId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "platform",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "platform",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "payType",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "payType",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "payOrderId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "payOrderId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "createTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "createTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "base_menu": {
+        "data": [
+            {
+                "icon": "bIcon-shopFill",
+                "level": 1,
+                "menuId": "base",
+                "openType": "redirectTo",
+                "permissions": [],
+                "platform": "all",
+                "remark": "",
+                "sort": 500,
+                "title": "管理中心",
+                "url": "",
+                "updateTime": 1624057625973
+            },
+            {
+                "level": 3,
+                "menuId": "system_role_list",
+                "openType": "redirectTo",
+                "parentId": "base_system",
+                "permissions": [
+                    {
+                        "saveLog": false,
+                        "url": "base-admin/role/list"
+                    }
+                ],
+                "platform": "all",
+                "remark": "",
+                "sort": 20,
+                "subTitle": "RoleManagement",
+                "title": "角色管理",
+                "url": "/uni_modules/base-cloud-admin/pages/system/role"
+            },
+            {
+                "level": 4,
+                "menuId": "system_role_delete",
+                "parentId": "system_role_list",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/role/remove"
+                    }
+                ],
+                "sort": 50,
+                "title": "删除"
+            },
+            {
+                "level": 3,
+                "menuId": "system_config_list",
+                "openType": "redirectTo",
+                "parentId": "base_system",
+                "permissions": [
+                    {
+                        "saveLog": false,
+                        "url": "baker-admin/config/info"
+                    }
+                ],
+                "platform": "all",
+                "sort": 80,
+                "subTitle": "SystemParamConfig",
+                "title": "系统参数配置",
+                "url": "/uni_modules/baker-admin/pages/config/config",
+                "activeUrl": [],
+                "remark": "",
+                "updateTime": 1630064302406
+            },
+            {
+                "json": "uni_modules/uni-upgrade-center/menu.json",
+                "level": 3,
+                "menuId": "system_operateLog_page",
+                "openType": "redirectTo",
+                "parentId": "base_system",
+                "permissions": [
+                    {
+                        "saveLog": false,
+                        "url": "base-admin/operateLog/page"
+                    }
+                ],
+                "platform": "all",
+                "remark": "",
+                "sort": 70,
+                "subTitle": "OperateLogs",
+                "title": "操作日志",
+                "url": "/uni_modules/base-cloud-admin/pages/system/operateLog"
+            },
+            {
+                "level": 3,
+                "menuId": "system_menu_list",
+                "openType": "redirectTo",
+                "parentId": "base_system",
+                "permissions": [
+                    {
+                        "saveLog": false,
+                        "url": "base-admin/menu/list"
+                    }
+                ],
+                "platform": "all",
+                "remark": "",
+                "sort": 0,
+                "subTitle": "MenuManagement",
+                "title": "菜单管理",
+                "url": "/uni_modules/base-cloud-admin/pages/system/menu"
+            },
+            {
+                "level": 4,
+                "menuId": "system_menu_saveFromPlugins",
+                "parentId": "system_menu_list",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/menu/saveFromPlugins"
+                    }
+                ],
+                "remark": "",
+                "sort": 130,
+                "title": "插件菜单"
+            },
+            {
+                "level": 4,
+                "menuId": "system_config_edit",
+                "parentId": "system_config_list",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/config/save"
+                    }
+                ],
+                "sort": 150,
+                "title": "编辑",
+                "remark": "",
+                "updateTime": 1625005673958
+            },
+            {
+                "level": 4,
+                "menuId": "system_userCenter_delete",
+                "parentId": "system_userCenter_list",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/userCenter/remove"
+                    }
+                ],
+                "remark": "",
+                "sort": 10,
+                "title": "删除"
+            },
+            {
+                "level": 4,
+                "menuId": "system_userCenter_edit",
+                "parentId": "system_userCenter_list",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/userCenter/save"
+                    },
+                    {
+                        "url": "base-admin/role/options"
+                    },
+                    {
+                        "url": "base-admin/userCenter/genders"
+                    }
+                ],
+                "remark": "",
+                "sort": 0,
+                "title": "编辑"
+            },
+            {
+                "json": "uni_modules/uni-upgrade-center/menu.json",
+                "level": 4,
+                "menuId": "system_operateLog_delete",
+                "parentId": "system_operateLog_page",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/operateLog/remove"
+                    }
+                ],
+                "sort": 140,
+                "title": "删除"
+            },
+            {
+                "level": 4,
+                "menuId": "system_role_edit",
+                "parentId": "system_role_list",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/role/save"
+                    },
+                    {
+                        "url": "base-admin/menu/listForAuth"
+                    }
+                ],
+                "remark": "",
+                "sort": 40,
+                "title": "编辑"
+            },
+            {
+                "level": 4,
+                "menuId": "system_userCenter_switchStatus",
+                "parentId": "system_userCenter_list",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/userCenter/switchStatus"
+                    }
+                ],
+                "remark": "",
+                "sort": 120,
+                "title": "禁用"
+            },
+            {
+                "level": 3,
+                "menuId": "system_userCenter_list",
+                "openType": "redirectTo",
+                "parentId": "base_system",
+                "permissions": [
+                    {
+                        "saveLog": false,
+                        "url": "base-admin/userCenter/page"
+                    }
+                ],
+                "platform": "all",
+                "remark": "",
+                "sort": 10,
+                "subTitle": "UserMenagement",
+                "title": "用户管理",
+                "url": "/uni_modules/base-cloud-admin/pages/system/user"
+            },
+            {
+                "level": 4,
+                "menuId": "system_menu_delete",
+                "parentId": "system_menu_list",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/menu/remove"
+                    }
+                ],
+                "sort": 30,
+                "title": "删除"
+            },
+            {
+                "level": 4,
+                "menuId": "system_menu_edit",
+                "parentId": "system_menu_list",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/menu/save"
+                    },
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/menu/batchSave"
+                    },
+                    {
+                        "url": "base-admin/menu/listByLevel"
+                    },
+                    {
+                        "url": "base-admin/menu/exportData"
+                    }
+                ],
+                "remark": "",
+                "sort": 20,
+                "title": "编辑",
+                "updateTime": 1620943945339
+            },
+            {
+                "icon": "bIcon-setFill",
+                "level": 2,
+                "menuId": "base_system",
+                "openType": "redirectTo",
+                "parentId": "base",
+                "permissions": [],
+                "platform": "all",
+                "remark": "",
+                "sort": 100,
+                "title": "系统管理",
+                "url": "",
+                "updateTime": 1620967342304
+            },
+            {
+                "json": "uni_modules/uni-upgrade-center/menu.json",
+                "level": 4,
+                "menuId": "system_operateLog_edit",
+                "parentId": "system_operateLog_page",
+                "permissions": [
+                    {
+                        "saveLog": true,
+                        "url": "base-admin/operateLog/save"
+                    }
+                ],
+                "sort": 130,
+                "title": "编辑"
+            },
+            {
+                "level": 2,
+                "parentId": "base",
+                "title": "书籍管理",
+                "icon": "bk-wp-sj-2",
+                "menuId": "business_book",
+                "url": "",
+                "openType": "redirectTo",
+                "permissions": [],
+                "platform": "all",
+                "sort": 10,
+                "remark": "",
+                "createTime": 1619141226867,
+                "updateTime": 1622071924104
+            },
+            {
+                "menuId": "basic_book_list",
+                "parentId": "business_book",
+                "title": "书籍列表",
+                "subTitle": "BookManagement",
+                "url": "/uni_modules/baker-admin/pages/book/book",
+                "openType": "redirectTo",
+                "sort": 10,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "baker-admin/book/page"
+                    },
+                    {
+                        "url": "baker-admin/book/statusOptions"
+                    },
+                    {
+                        "url": "baker-admin/book/finishStatusOptions"
+                    }
+                ],
+                "createTime": 1619141286766,
+                "updateTime": 1629262449555,
+                "remark": "",
+                "activeUrl": [
+                    {
+                        "url": "/uni_modules/baker-admin/pages/book/chapter"
+                    }
+                ]
+            },
+            {
+                "parentId": "basic_book_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "basic_book_edit",
+                "permissions": [
+                    {
+                        "url": "baker-admin/book/save",
+                        "saveLog": true
+                    },
+                    {
+                        "url": "baker-admin/book/info"
+                    }
+                ],
+                "sort": 170,
+                "createTime": 1619141286989,
+                "updateTime": 1619581186408,
+                "remark": ""
+            },
+            {
+                "parentId": "basic_book_list",
+                "title": "删除",
+                "level": 4,
+                "menuId": "basic_book_delete",
+                "permissions": [
+                    {
+                        "url": "baker-admin/book/remove",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 180,
+                "createTime": 1619141287202,
+                "updateTime": 1619141391397,
+                "remark": ""
+            },
+            {
+                "menuId": "basic_category_list",
+                "parentId": "business_book",
+                "title": "分类管理",
+                "subTitle": "CategoryManagement",
+                "url": "/uni_modules/baker-admin/pages/book/category",
+                "openType": "redirectTo",
+                "sort": 80,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "baker-admin/category/list",
+                        "saveLog": false
+                    },
+                    {
+                        "url": "baker-admin/category/channel"
+                    }
+                ],
+                "createTime": 1619146429351,
+                "updateTime": 1622799722061,
+                "remark": "",
+                "activeUrl": []
+            },
+            {
+                "parentId": "basic_category_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "basic_category_edit",
+                "permissions": [
+                    {
+                        "url": "baker-admin/category/save",
+                        "saveLog": false
+                    }
+                ],
+                "sort": 190,
+                "createTime": 1619146429590,
+                "updateTime": 1620815638749,
+                "remark": ""
+            },
+            {
+                "parentId": "basic_category_list",
+                "title": "删除",
+                "level": 4,
+                "menuId": "basic_category_delete",
+                "permissions": [
+                    {
+                        "url": "baker-admin/category/remove",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 200,
+                "createTime": 1619146429808,
+                "updateTime": 1619146429808
+            },
+            {
+                "menuId": "business_daily",
+                "parentId": "base",
+                "level": 2,
+                "title": "日常运维",
+                "icon": "bk-vip-fill",
+                "url": "",
+                "sort": 20,
+                "remark": "",
+                "platform": "all",
+                "openType": "redirectTo",
+                "permissions": [],
+                "createTime": 1620651083238,
+                "updateTime": 1622071938158
+            },
+            {
+                "menuId": "base-banner_admin_list",
+                "parentId": "business_daily",
+                "title": "轮播图管理",
+                "subTitle": "BannerManagement",
+                "url": "/uni_modules/base-banner/pages/banner/banner",
+                "openType": "redirectTo",
+                "sort": 120,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "base-banner/admin/list",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1620651134702,
+                "updateTime": 1620651134702
+            },
+            {
+                "parentId": "base-banner_admin_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "base-banner_admin_edit",
+                "permissions": [
+                    {
+                        "url": "base-banner/admin/save",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 210,
+                "createTime": 1620651135196,
+                "updateTime": 1620651135196
+            },
+            {
+                "parentId": "base-banner_admin_list",
+                "title": "删除",
+                "level": 4,
+                "menuId": "base-banner_admin_delete",
+                "permissions": [
+                    {
+                        "url": "base-banner/admin/remove",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 220,
+                "createTime": 1620651135649,
+                "updateTime": 1620651135649
+            },
+            {
+                "level": 4,
+                "title": "章节编辑",
+                "menuId": "business_book_",
+                "sort": 230,
+                "remark": "管理员",
+                "parentId": "basic_book_list",
+                "permissions": [
+                    {
+                        "url": "baker-admin/chapter/save",
+                        "saveLog": true
+                    },
+                    {
+                        "url": "baker-admin/chapter/info"
+                    },
+                    {
+                        "url": "baker-admin/chapter/list"
+                    },
+                    {
+                        "url": "baker-admin/chapter/page"
+                    }
+                ],
+                "createTime": 1620815458823,
+                "updateTime": 1620816934967
+            },
+            {
+                "level": 4,
+                "title": "章节删除",
+                "menuId": "business_book_chapter_remove",
+                "sort": 240,
+                "remark": "",
+                "parentId": "basic_book_list",
+                "permissions": [
+                    {
+                        "url": "baker-admin/chapter/remove",
+                        "saveLog": true
+                    }
+                ],
+                "createTime": 1620815494004,
+                "updateTime": 1620816940140
+            },
+            {
+                "level": 4,
+                "title": "上下架",
+                "menuId": "basic_book_changeStatus",
+                "sort": 190,
+                "remark": "",
+                "parentId": "basic_book_list",
+                "permissions": [
+                    {
+                        "url": "baker-admin/book/changeStatus",
+                        "saveLog": true
+                    }
+                ],
+                "createTime": 1620892029315,
+                "updateTime": 1620892056224
+            },
+            {
+                "level": 2,
+                "title": "个人资料",
+                "icon": "bIcon-userFill",
+                "menuId": "base_userInfo",
+                "url": "/uni_modules/base-cloud-admin/pages/system/profile",
+                "sort": 30,
+                "remark": "",
+                "platform": "all",
+                "parentId": "base",
+                "openType": "redirectTo",
+                "permissions": [
+                    {
+                        "url": "base-admin/userCenter/userInfo"
+                    },
+                    {
+                        "url": "base-admin/userCenter/modify",
+                        "saveLog": true
+                    },
+                    {
+                        "url": "base-admin/userCenter/removeAvatar"
+                    }
+                ],
+                "createTime": 1620944088294,
+                "updateTime": 1624095028330
+            },
+            {
+                "menuId": "basic_recommend_list",
+                "parentId": "business_daily",
+                "title": "推荐管理",
+                "subTitle": "Recommends",
+                "url": "/uni_modules/baker-admin/pages/book/recommend",
+                "openType": "redirectTo",
+                "sort": 130,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "baker-admin/recommend/list",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1620967389708,
+                "updateTime": 1620967389708
+            },
+            {
+                "parentId": "basic_recommend_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "basic_recommend_edit",
+                "permissions": [
+                    {
+                        "url": "baker-admin/recommend/save",
+                        "saveLog": true
+                    },
+                    {
+                        "url": "baker-admin/recommend/books"
+                    }
+                ],
+                "sort": 250,
+                "createTime": 1620967390163,
+                "updateTime": 1620967419888,
+                "remark": ""
+            },
+            {
+                "parentId": "basic_recommend_list",
+                "title": "删除",
+                "level": 4,
+                "menuId": "basic_recommend_delete",
+                "permissions": [
+                    {
+                        "url": "baker-admin/recommend/remove",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 260,
+                "createTime": 1620967390610,
+                "updateTime": 1620967390610
+            },
+            {
+                "menuId": "baker-admin_vip_list",
+                "parentId": "baker_admin_vip",
+                "title": "会员卡种设置",
+                "subTitle": "",
+                "url": "/uni_modules/baker-admin/pages/operation/vip",
+                "openType": "redirectTo",
+                "sort": 140,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "baker-admin/vip/listBySort",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1624057442020,
+                "updateTime": 1624919543566,
+                "activeUrl": [],
+                "remark": ""
+            },
+            {
+                "parentId": "baker-admin_vip_list",
+                "title": "删除",
+                "level": 4,
+                "menuId": "baker-admin_vip_delete",
+                "permissions": [
+                    {
+                        "url": "baker-admin/vip/remove",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 280,
+                "createTime": 1624057443008,
+                "updateTime": 1624057443008
+            },
+            {
+                "parentId": "baker-admin_vip_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "baker-admin_vip_edit",
+                "permissions": [
+                    {
+                        "url": "baker-admin/vip/saveBySort",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 270,
+                "createTime": 1624057442531,
+                "updateTime": 1624766501793,
+                "remark": ""
+            },
+            {
+                "level": 2,
+                "title": "财务中心",
+                "icon": "bk-jinbi",
+                "menuId": "base_trade",
+                "url": "",
+                "sort": 25,
+                "remark": "",
+                "platform": "all",
+                "parentId": "base",
+                "openType": "redirectTo",
+                "permissions": [],
+                "createTime": 1624095003316,
+                "updateTime": 1624095042863
+            },
+            {
+                "level": 3,
+                "title": "会员卡购买记录",
+                "subTitle": "",
+                "menuId": "base_trade_vipOrder",
+                "url": "/uni_modules/baker-admin/pages/finance/vipOrder",
+                "sort": 150,
+                "remark": "",
+                "platform": "all",
+                "parentId": "baker_admin_vip",
+                "openType": "redirectTo",
+                "activeUrl": [],
+                "permissions": [
+                    {
+                        "url": "baker-admin/vipOrder/page",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1624095115773,
+                "updateTime": 1624919447699
+            },
+            {
+                "level": 4,
+                "title": "退款",
+                "menuId": "base_trade_",
+                "sort": 290,
+                "remark": "",
+                "parentId": "base_trade_vipOrder",
+                "permissions": [
+                    {
+                        "url": "baker-admin/vipOrder/refund",
+                        "saveLog": true
+                    }
+                ],
+                "createTime": 1624145471691,
+                "updateTime": 1624145471691
+            },
+            {
+                "level": 3,
+                "title": "平台账单",
+                "subTitle": "",
+                "menuId": "baker_admin_score_platform_bill",
+                "url": "/uni_modules/baker-admin/pages/finance/platformBill",
+                "sort": 160,
+                "remark": "",
+                "platform": "all",
+                "parentId": "base_trade",
+                "openType": "redirectTo",
+                "activeUrl": [],
+                "permissions": [
+                    {
+                        "url": "baker-admin/platformBill/page",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1624418685695,
+                "updateTime": 1624420051687
+            },
+            {
+                "menuId": "baker-admin_redPacket_list",
+                "parentId": "marketing_share",
+                "title": "邀请红包奖励",
+                "subTitle": "",
+                "url": "/uni_modules/baker-admin/pages/share/redpacket",
+                "openType": "redirectTo",
+                "sort": 20,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "baker-admin/redpacket/list",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1624765450674,
+                "updateTime": 1624963993366,
+                "activeUrl": [],
+                "remark": ""
+            },
+            {
+                "parentId": "baker-admin_redPacket_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "baker-admin_redPacket_edit",
+                "permissions": [
+                    {
+                        "url": "baker-admin/redpacket/save",
+                        "saveLog": true
+                    },
+                    {
+                        "url": "baker-admin/redpacket/saveConfig",
+                        "saveLog": true
+                    },
+                    {
+                        "url": "baker-admin/redpacket/configInfo"
+                    }
+                ],
+                "sort": 310,
+                "createTime": 1624765451165,
+                "updateTime": 1624778649261,
+                "remark": ""
+            },
+            {
+                "parentId": "baker-admin_redPacket_list",
+                "title": "删除",
+                "level": 4,
+                "menuId": "baker-admin_redPacket_delete",
+                "permissions": [
+                    {
+                        "url": "baker-admin/redpacket/remove",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 320,
+                "createTime": 1624765451623,
+                "updateTime": 1624766188399,
+                "remark": ""
+            },
+            {
+                "menuId": "baker-admin_coinConfig_list",
+                "parentId": "marketing_coin",
+                "title": "金币奖励配置",
+                "subTitle": "",
+                "url": "/uni_modules/baker-admin/pages/finance/coinConfig",
+                "openType": "redirectTo",
+                "sort": 190,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "baker-admin/coinConfig/info",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1624783317236,
+                "updateTime": 1624919214324,
+                "activeUrl": [],
+                "remark": ""
+            },
+            {
+                "parentId": "baker-admin_coinConfig_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "baker-admin_coinConfig_edit",
+                "permissions": [
+                    {
+                        "url": "baker-admin/coinConfig/save",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 330,
+                "createTime": 1624783317745,
+                "updateTime": 1624783317745
+            },
+            {
+                "parentId": "baker-admin_coinConfig_list",
+                "title": "删除",
+                "level": 4,
+                "menuId": "baker-admin_coinConfig_delete",
+                "permissions": [
+                    {
+                        "url": "baker-admin/coinConfig/remove",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 340,
+                "createTime": 1624783318174,
+                "updateTime": 1624783318174
+            },
+            {
+                "level": 3,
+                "title": "金币账单记录",
+                "subTitle": "",
+                "menuId": "base_trade_coinRecords",
+                "url": "/uni_modules/baker-admin/pages/finance/coinRecords",
+                "sort": 200,
+                "remark": "",
+                "platform": "all",
+                "parentId": "marketing_coin",
+                "openType": "redirectTo",
+                "activeUrl": [],
+                "permissions": [
+                    {
+                        "url": "baker-admin/coin/page",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1624831600992,
+                "updateTime": 1624919227055
+            },
+            {
+                "menuId": "baker-admin_lucky_list",
+                "parentId": "marketing_lucky",
+                "title": "抽奖奖品设置",
+                "subTitle": "",
+                "url": "/uni_modules/baker-admin/pages/finance/lucky",
+                "openType": "redirectTo",
+                "sort": 210,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "baker-admin/luckyConfig/info",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1624874759998,
+                "updateTime": 1624919291711,
+                "activeUrl": [],
+                "remark": ""
+            },
+            {
+                "parentId": "baker-admin_lucky_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "baker-admin_lucky_edit",
+                "permissions": [
+                    {
+                        "url": "baker-admin/luckyConfig/save",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 350,
+                "createTime": 1624874760483,
+                "updateTime": 1624882590671,
+                "remark": ""
+            },
+            {
+                "level": 1,
+                "title": "营销中心",
+                "icon": "bk-choujiang",
+                "menuId": "marketing",
+                "url": "",
+                "sort": 510,
+                "remark": "",
+                "platform": "all",
+                "openType": "redirectTo",
+                "permissions": [],
+                "createTime": 1624918605139,
+                "updateTime": 1624918605139
+            },
+            {
+                "level": 2,
+                "title": "分享裂变",
+                "icon": "bk-fenxiang fz13",
+                "menuId": "marketing_share",
+                "url": "",
+                "sort": 10,
+                "remark": "",
+                "platform": "all",
+                "parentId": "marketing",
+                "openType": "redirectTo",
+                "permissions": [],
+                "createTime": 1624918744587,
+                "updateTime": 1624921054751
+            },
+            {
+                "level": 3,
+                "title": "分享参数配置",
+                "subTitle": "",
+                "menuId": "marketing_share_",
+                "url": "/uni_modules/baker-admin/pages/share/share",
+                "sort": 10,
+                "remark": "",
+                "platform": "all",
+                "parentId": "marketing_share",
+                "openType": "redirectTo",
+                "activeUrl": [],
+                "permissions": [
+                    {
+                        "url": "base-fission/api/share/info"
+                    }
+                ],
+                "createTime": 1624919001895,
+                "updateTime": 1624963985825
+            },
+            {
+                "level": 4,
+                "title": "编辑",
+                "menuId": "marketing_share_edit",
+                "sort": 360,
+                "remark": "",
+                "parentId": "marketing_share_",
+                "permissions": [
+                    {
+                        "url": "base-fission/auth/share/save",
+                        "saveLog": true
+                    }
+                ],
+                "createTime": 1624919030070,
+                "updateTime": 1624919030070
+            },
+            {
+                "level": 2,
+                "title": "金币管理",
+                "icon": "bk-jinbi",
+                "menuId": "marketing_coin",
+                "url": "",
+                "sort": 30,
+                "remark": "",
+                "platform": "all",
+                "parentId": "marketing",
+                "openType": "redirectTo",
+                "permissions": [],
+                "createTime": 1624919185017,
+                "updateTime": 1624919185017
+            },
+            {
+                "level": 2,
+                "title": "抽奖管理",
+                "icon": "bk-choujiang",
+                "menuId": "marketing_lucky",
+                "url": "",
+                "sort": 40,
+                "remark": "",
+                "platform": "all",
+                "parentId": "marketing",
+                "openType": "redirectTo",
+                "permissions": [],
+                "createTime": 1624919270916,
+                "updateTime": 1624919270916
+            },
+            {
+                "level": 2,
+                "title": "会员卡管理",
+                "icon": "bk-VIP1",
+                "menuId": "baker_admin_vip",
+                "url": "",
+                "sort": 20,
+                "remark": "",
+                "platform": "all",
+                "parentId": "marketing",
+                "openType": "redirectTo",
+                "permissions": [],
+                "createTime": 1624919338039,
+                "updateTime": 1625021554068
+            },
+            {
+                "level": 3,
+                "title": "抽奖记录",
+                "subTitle": "",
+                "menuId": "marketing_lucky_records",
+                "url": "/uni_modules/baker-admin/pages/lucky/luckyRecords",
+                "sort": 220,
+                "remark": "",
+                "platform": "all",
+                "parentId": "marketing_lucky",
+                "openType": "redirectTo",
+                "activeUrl": [],
+                "permissions": [
+                    {
+                        "url": "baker-admin/lucky/page",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1624919827266,
+                "updateTime": 1624920409013
+            },
+            {
+                "menuId": "baker-admin_withdraw_list",
+                "parentId": "base_trade",
+                "title": "提现金额管理",
+                "subTitle": "",
+                "url": "/uni_modules/baker-admin/pages/finance/withdraw",
+                "openType": "redirectTo",
+                "sort": 10,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "baker-admin/withdraw/list",
+                        "saveLog": false
+                    },
+                    {
+                        "url": "baker-admin/withdrawConfig/info"
+                    }
+                ],
+                "createTime": 1624944008797,
+                "updateTime": 1624944985366,
+                "activeUrl": [],
+                "remark": ""
+            },
+            {
+                "parentId": "baker-admin_withdraw_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "baker-admin_withdraw_edit",
+                "permissions": [
+                    {
+                        "url": "baker-admin/withdraw/save",
+                        "saveLog": true
+                    },
+                    {
+                        "url": "baker-admin/withdrawConfig/save",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 370,
+                "createTime": 1624944009265,
+                "updateTime": 1624945005306,
+                "remark": ""
+            },
+            {
+                "parentId": "baker-admin_withdraw_list",
+                "title": "删除",
+                "level": 4,
+                "menuId": "baker-admin_withdraw_delete",
+                "permissions": [
+                    {
+                        "url": "baker-admin/withdraw/remove",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 380,
+                "createTime": 1624944009682,
+                "updateTime": 1624944009682
+            },
+            {
+                "level": 3,
+                "title": "红包发放记录",
+                "subTitle": "",
+                "menuId": "marketing_share_redpacketRecord",
+                "url": "/uni_modules/baker-admin/pages/share/redpacketRecord",
+                "sort": 230,
+                "remark": "",
+                "platform": "all",
+                "parentId": "marketing_share",
+                "openType": "redirectTo",
+                "activeUrl": [],
+                "permissions": [
+                    {
+                        "url": "baker-admin/redpacketRecord/page",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1624964093890,
+                "updateTime": 1624964093890
+            },
+            {
+                "level": 4,
+                "title": "开通会员",
+                "menuId": "baker_admin_vip_",
+                "sort": 390,
+                "remark": "",
+                "parentId": "base_trade_vipOrder",
+                "permissions": [
+                    {
+                        "url": "baker-admin/vipOrder/recharge",
+                        "saveLog": true
+                    },
+                    {
+                        "url": "baker-admin/user/search"
+                    }
+                ],
+                "createTime": 1625097174460,
+                "updateTime": 1625097174460
+            },
+            {
+                "menuId": "baker-admin_partner_list",
+                "parentId": "business_book",
+                "title": "合作方管理",
+                "subTitle": "",
+                "url": "/uni_modules/baker-admin/pages/book/partner",
+                "openType": "redirectTo",
+                "sort": 240,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "baker-admin/partner/page",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1625440330377,
+                "updateTime": 1627960857979,
+                "activeUrl": [
+                    {
+                        "url": "/uni_modules/baker-admin/pages/book/partnerBook"
+                    }
+                ],
+                "remark": ""
+            },
+            {
+                "parentId": "baker-admin_partner_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "baker-admin_partner_edit",
+                "permissions": [
+                    {
+                        "url": "baker-admin/partner/save",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 400,
+                "createTime": 1625440330816,
+                "updateTime": 1625440330816
+            },
+            {
+                "parentId": "baker-admin_partner_list",
+                "title": "删除",
+                "level": 4,
+                "menuId": "baker-admin_partner_delete",
+                "permissions": [
+                    {
+                        "url": "baker-admin/partner/remove",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 410,
+                "createTime": 1625440331218,
+                "updateTime": 1625440331218
+            },
+            {
+                "menuId": "base-app-version_version_list",
+                "parentId": "business_daily",
+                "title": "APP版本管理",
+                "subTitle": "",
+                "url": "/uni_modules/baker-admin/pages/operation/version",
+                "openType": "redirectTo",
+                "sort": 250,
+                "platform": "all",
+                "level": 3,
+                "permissions": [
+                    {
+                        "url": "base-app-version/version/info"
+                    }
+                ],
+                "createTime": 1625611803399,
+                "updateTime": 1625615240364,
+                "activeUrl": [],
+                "remark": ""
+            },
+            {
+                "parentId": "base-app-version_version_list",
+                "title": "编辑",
+                "level": 4,
+                "menuId": "base-app-version_version_edit",
+                "permissions": [
+                    {
+                        "url": "base-app-version/version/save",
+                        "saveLog": true
+                    }
+                ],
+                "sort": 420,
+                "createTime": 1625611803821,
+                "updateTime": 1625611803821
+            },
+            {
+                "level": 3,
+                "title": "提现记录",
+                "subTitle": "",
+                "menuId": "baker_admin_withdraw_records",
+                "url": "/uni_modules/baker-admin/pages/finance/withdrawRecord",
+                "sort": 15,
+                "remark": "",
+                "platform": "all",
+                "parentId": "base_trade",
+                "openType": "redirectTo",
+                "activeUrl": [],
+                "permissions": [
+                    {
+                        "url": "baker-admin/withdrawRecord/page",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1625872326029,
+                "updateTime": 1625872438437
+            },
+            {
+                "level": 4,
+                "title": "审核转账",
+                "menuId": "baker_admin_withdraw_audit",
+                "sort": 430,
+                "remark": "",
+                "parentId": "baker_admin_withdraw_records",
+                "permissions": [
+                    {
+                        "url": "baker-admin/withdrawRecord/audit",
+                        "saveLog": true
+                    }
+                ],
+                "createTime": 1625872409010,
+                "updateTime": 1625872409010
+            },
+            {
+                "level": 4,
+                "title": "分类映射",
+                "menuId": "partner_book_category",
+                "sort": 440,
+                "remark": "",
+                "parentId": "baker-admin_partner_list",
+                "permissions": [
+                    {
+                        "url": "baker-admin/partner/saveCategoryMap",
+                        "saveLog": true
+                    }
+                ],
+                "createTime": 1627940832122,
+                "updateTime": 1627940851738
+            },
+            {
+                "level": 4,
+                "title": "书单",
+                "menuId": "partner_books",
+                "sort": 450,
+                "remark": "",
+                "parentId": "baker-admin_partner_list",
+                "permissions": [
+                    {
+                        "url": "baker-admin/partnerBook/page",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1627940903252,
+                "updateTime": 1627957906862
+            },
+            {
+                "level": 3,
+                "title": "意见反馈",
+                "subTitle": "",
+                "menuId": "business_daily_feedback",
+                "url": "/uni_modules/baker-admin/pages/operation/feedback",
+                "sort": 260,
+                "remark": "",
+                "platform": "all",
+                "parentId": "business_daily",
+                "openType": "redirectTo",
+                "activeUrl": [],
+                "permissions": [
+                    {
+                        "url": "baker-admin/feedback/page",
+                        "saveLog": false
+                    }
+                ],
+                "createTime": 1629173093454,
+                "updateTime": 1629173093454
+            }
+        ],
+        "index": [
+            {
+                "IndexName": "level",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "level",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "parentId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "parentId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "menuId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "menuId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": true
+                }
+            },
+            {
+                "IndexName": "permissions",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "permissions",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "sort",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "sort",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "menuId": {
+                    "description": "菜单标识"
+                }
+            }
+        }
+    },
+    "base_payment_order": {
+        "index": [
+            {
+                "IndexName": "payType",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "payType",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "type",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "type",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "userId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "userId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "platform",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "platform",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "status",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "status",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "createTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "createTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "paidTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "paidTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "transactionId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "transactionId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "base_payment_refund": {
+        "index": [
+            {
+                "IndexName": "orderId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "orderId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "payType",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "payType",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "platform",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "platform",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "status",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "status",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "createTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "createTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "refundId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "refundId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "refundTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "refundTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "base_payment_transfer": {
+        "index": [
+            {
+                "IndexName": "status",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "status",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "payType",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "payType",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "platform",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "platform",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "account",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "account",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "realName",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "realName",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "createTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "createTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "openid",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "openid",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "transactionId",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "transactionId",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                }
+            }
+        }
+    },
+    "base_operate_log": {
+        "index": [
+            {
+                "IndexName": "uid",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "uid",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "name",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "name",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "url",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "url",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "ip",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "ip",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            },
+            {
+                "IndexName": "createTime",
+                "MgoKeySchema": {
+                    "MgoIndexKeys": [
+                        {
+                            "Name": "createTime",
+                            "Direction": "1"
+                        }
+                    ],
+                    "MgoIsUnique": false
+                }
+            }
+        ]
+    },
+    "opendb-verify-codes": {},
+    "uni-id-roles": {
+        "data": [
+            {
+                "comment": "无需分配权限，具有所有权限",
+                "menuIds": [],
+                "permission": [],
+                "role_id": "admin",
+                "role_name": "超级管理员",
+                "static": true
+            },
+            {
+                "role_name": "普通会员",
+                "menuIds": [],
+                "role_id": "member",
+                "comment": "注册成为普通会员，不具有任何管理权限。",
+                "static": true,
+                "permission": [],
+                "createTime": 1625122368051,
+                "updateTime": 1625122368051
+            }
+        ]
+    },
+    "uni-id-users": {
+    	"index": [{
+    		"IndexName": "baker_total_coin",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "baker_total_coin",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "username",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "username",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "mobile",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "mobile",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "email",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "email",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "wx_openid.app-plus",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "wx_openid.app-plus",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "wx_openid.mp-weixin",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "wx_openid.mp-weixin",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "wx_unionid",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "wx_unionid",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "ali_openid",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "ali_openid",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "my_invite_code",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "my_invite_code",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "inviter_uid",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "inviter_uid",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "invite_time",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "invite_time",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}, {
+    		"IndexName": "role",
+    		"MgoKeySchema": {
+    			"MgoIndexKeys": [{
+    				"Name": "role",
+    				"Direction": "1"
+    			}],
+    			"MgoIsUnique": false
+    		}
+    	}]
+    }
+}

@@ -1,0 +1,23 @@
+$main:#FFDB3C; //主背景色
+$lightMain: rgba($main,0.1); //淡主色
+$mainInverse:#000000; //与主色搭配的反色
+$mainGradual:linear-gradient(to right, #FFE046 , #FED22E);//渐变主色
+$mainGradualInverse:#000;//与渐变主色搭配的反色
+$activeColor:#FCA111;//聚焦时的边线颜色
+$borderColor: #eee;//边线颜色
+
+/* 配色 */
+$red:#e1251b;
+$black: #000; 
+$yellow:#f69c00;
+$green:#07c160;
+$orange: #F74F0E;
+$pink: #FF6D8A;
+$blue:#0081ff;
+$brown:	#8B4512;
+$purple:#6739b6;
+$white : #fff ;
+$black : #000 ;
+$gray : #777 ;
+$grey : #82939c ;
+

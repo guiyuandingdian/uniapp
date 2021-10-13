@@ -1,0 +1,160 @@
+@import "baker-app-font" ;
+
+[class*="bk-"]  {
+  font-family: "baker" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "avanti";
+  src: url('uni_modules/baker-app/css/font/Avanti.ttf') format('truetype');
+}
+
+.avanti{
+	font-family: "avanti";
+}
+
+@font-face {
+  font-family: "impact";
+  src:url('uni_modules/baker-app/css/font/impact.ttf') format('truetype');
+}
+
+.impact{
+	font-family: "impact";
+}
+
+.bar{
+	background-color: #FCA111!important;
+}
+
+.orColor{
+	color: #FCA111;
+}
+	
+.tabStyle{
+	background-color: #F2F2F2;
+	color: #666666;
+	&+.tabStyle{
+		border-left: 1px solid #fff;
+	}
+	&:first-child{
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+	&:last-child{
+		border-top-right-radius:20px;
+		border-bottom-right-radius:20px;
+	}
+}
+
+.tabActive{
+	background-color: #FEDD38;
+	color: #000;
+	font-weight: bold;
+	font-size: 16px;
+	&:first-child{
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+	&:last-child{
+		border-top-right-radius:20px;
+		border-bottom-right-radius:20px;
+	}
+}
+
+.bdc {
+	border: 1px solid #000!important;
+}
+
+.bookBg{
+	background-color: #FCEBCD;
+	color: #645536;
+}
+
+.darkBg{
+	background-color: #343436;
+	color: #BABABA;
+}
+
+.topBarBg{
+	background-color: #343436;
+	color: #BABABA;
+}
+
+.greenTheme{
+	background-color: #d1e4d0;
+	color: #152814;
+	.themeBorder{
+		border-color:#152814 ;
+	}
+	.adBg{
+		background-color: #C7DDC6;
+	}
+}
+.yellowTheme{
+	background-color: #f9e6be;
+	color: #422e0d;
+	.themeBorder{
+		border-color:#422e0d ;
+	}
+	.adBg{
+		background-color: #F1DDAB;
+	}
+}
+.whiteTheme{
+	background-color: #fff;
+	color: #000;
+	.themeBorder{
+		border-color:#000 ;
+	}
+	.adBg{
+		background-color: #F0F0F0;
+	}
+}
+.brownTheme{
+	background-color: #483c3c;
+	color: #aa9e9e;
+	.themeBorder{
+		border-color:#aa9e9e ;
+	}
+	.adBg{
+		background-color: #423836;
+	}
+}
+.darkTheme{
+	background-color: #3b3e47;
+	color: #9699a2;
+	.themeBorder{
+		border-color:#9699a2 ;
+	}
+	.adBg{
+		background-color: #373a44;
+	}
+}
+.blackTheme{
+	background-color: #242424;
+	color: #8C8C8C;
+	.themeBorder{
+		border-color:#8C8C8C ;
+	}
+	.adBg{
+		background-color: #2b2a2a;
+	}
+}
+.ti0{
+	text-indent: 0;
+}
+
+.golden{
+	color: #CB955A;
+}
+
+.dataItem{
+	background-color: #ffe0bc;
+	color: #584437;
+	&.active{
+		background-color: #ffedd7;
+	}
+}

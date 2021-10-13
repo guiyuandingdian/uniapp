@@ -1,0 +1,12 @@
+{
+	"smsSendInterval": 60,
+	"templates": {
+		"login": "12678",
+		"register": "12678",
+		"resetPassword": "12678",
+		"bind": "12678"
+	},
+	"smsCodeLength": 6,
+	"role": ["member"],
+	"scoreKey" : "baker_coin"
+}

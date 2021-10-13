@@ -1,0 +1,16 @@
+{
+	"name": "base-login",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"base-cloud-v3": "file:../../../../base-cloud-v3/uniCloud/cloudfunctions/common/base-cloud-v3",
+		"uni-config-center": "file:../../../../uni-config-center/uniCloud/cloudfunctions/common/uni-config-center",
+		"uni-id": "file:../../../../uni-id/uniCloud/cloudfunctions/common/uni-id"
+	}
+}

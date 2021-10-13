@@ -1,0 +1,17 @@
+.b-radio , .b-checkbox{
+	&.type_badge , &.type_tag{
+		.option{
+			.inner{
+				border: 1px solid $borderColor;
+				transition: border-color 0.4s;
+				border-radius: 3px;
+				.checkTag{
+					right: -0.5px;
+					bottom: -0.5px;
+					line-height: 12px;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

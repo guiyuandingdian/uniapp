@@ -1,0 +1,181 @@
+uni-content{
+	display: block;
+	position: relative;
+	padding-left: var(--window-left);
+}
+uni-left-window{
+	position: fixed;
+	display: block;
+	top: var(--window-top);
+	left: 0;
+	bottom: 0;
+	z-index: 11;
+	overflow-x: visible;
+}
+uni-main{
+	display: block;
+	width: 100%;
+}
+
+.windowBody{
+	margin: 0 15px;
+	position: relative;
+	top: 15px;
+	padding-bottom: 50px;
+	
+}
+
+/* 鼠标悬浮变色 */
+.hoverMain{
+	&:hover{
+		color: $main!important;
+	}
+}
+
+.hoverGreen{
+	&:hover{
+		color: $green!important;
+	}
+}
+
+.hoverRed{
+	&:hover{
+		color: $red!important;
+	}
+}
+
+.hoverBlue{
+	&:hover{
+		color: $blue!important;
+	}
+}
+
+.hoverGray{
+	&:hover{
+		color: $gray!important;
+	}
+}
+
+.hoverWhite{
+	&:hover{
+		color: $white!important;
+	}
+}
+
+.hoverBlack{
+	&:hover{
+		color: $black!important;
+	}
+}
+
+.hoverOrange{
+	&:hover{
+		color: $orange!important;
+	}
+}
+
+.hoverYellow{
+	&:hover{
+		color: $yellow!important;
+	}
+}
+
+.hoverBrown{
+	&:hover{
+		color: $brown!important;
+	}
+}
+
+.hoverPurple{
+	&:hover{
+		color: $purple!important;
+	}
+}
+
+.hover-show{
+	.hover-show-item{
+		display: none;
+		transition: all 0.4s;
+	}
+	&:hover{
+		.hover-show-item{
+			display: block;
+			&.inline{
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.hover-visiable{
+	.hover-visiable-item{
+		visibility: hidden;
+	}
+	&:hover{
+		.hover-visiable-item{
+			visibility: visible;
+		}
+	}
+}
+
+.hoverShadow{
+	transition: all .2s linear;
+	&:hover{
+		z-index: 2;
+		box-shadow: 0 5px 13px rgba(0,0,0,0.05);
+	}
+}
+
+
+ /* #ifdef H5 */
+ 
+ /*滚动条的宽度*/
+ ::-webkit-scrollbar{
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+ }
+ 
+ /*外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果*/
+ ::-webkit-scrollbar-track{
+	background-color: #f7f7f7;
+	border: 1px solid #efefef;
+ }
+ 
+ /*滚动条的设置*/
+ ::-webkit-scrollbar-thumb {
+ 	background-color: #e6e6e6;
+ 	min-height: 25px;
+ 	min-width: 25px;
+ 	border: 1px solid #e0e0e0;
+ }
+ 
+ .autoY{
+ 	 /*滚动条的宽度*/
+ 	 &::-webkit-scrollbar,::-webkit-scrollbar{
+ 	 	width:5px;
+ 		height: 5px;
+ 	 }
+ 	 
+ 	 /*外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果*/
+ 	 &::-webkit-scrollbar-track,::-webkit-scrollbar-track{
+ 	 	width: 5px;
+ 		height: 5px;
+ 	 	background-color:#f1f1f1;
+ 	 	display: none;
+ 	 	border-radius:2px;
+ 	 }
+ 	 
+ 	 /*滚动条的设置*/
+ 	 &::-webkit-scrollbar-thumb,::-webkit-scrollbar-thumb {
+ 	 	background-color:#e6e6e6;
+ 	 	background-clip:padding-box;
+ 	 	min-height:28px;
+ 	 	border-radius:2px;
+ 	 }
+ 	 /*滚动条移上去的背景*/
+ 	 &::-webkit-scrollbar-thumb:hover,::-webkit-scrollbar-thumb:hover {
+ 	 	opacity: .9;
+ 	 }
+ }
+ /* #endif */

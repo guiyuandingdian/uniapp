@@ -1,0 +1,7 @@
+{
+	"channels" : [
+		{"title" : "男频" , "value" : 1 , "key" : "male" },
+		{"title" : "女频" , "value" : 2 ,"key" : "female" },
+		{"title" : "出版" , "value" : 3 ,"key" : "publish" }
+	]
+}

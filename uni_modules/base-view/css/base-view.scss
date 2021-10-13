@@ -1,0 +1,47 @@
+page{
+	font: 14px/1.5 Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
+
+/* #ifdef H5 */
+body, html{
+	box-sizing: border-box;
+	user-select:auto!important;
+}
+/* #endif */
+
+[class*="bIcon-"] {
+	font-family: "basefont";
+	font-size: inherit;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@import "./font/base-view-font" ;
+@import "base-view-animate" ;
+
+//手机端
+@import "base-view-mb" ;
+
+//宽屏手机设备
+@media (min-width: 476px) {
+	// @import "base-view-mb-lg" ;
+}
+
+/* #ifdef H5 */
+//ipad
+@media (min-width: 768px) {
+	@import "base-view-ipad" ;
+}
+
+//小屏PC
+@media (min-width: 992px) { 
+	// @import "base-view-pc-sm" ;
+}
+
+//PC端
+@media (min-width: 1200px) { 
+	// @import "base-view-pc" ;
+}
+
+/* #endif */
